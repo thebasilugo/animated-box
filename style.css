@@ -1,0 +1,107 @@
+:root {
+  --dark-color: rgb(90, 90, 90);
+  --present-box: rgb(240, 58, 58);
+  --present-lid: rgb(216, 52, 52);
+  --ribbon-dim:  rgba(235, 199, 0, 0.6);
+  --ribbon-bright:  rgba(235, 199, 0, 0.8);
+  --shadow: rgba(0, 0, 0, 0.1);
+  --promo: rgb(255, 255, 255);
+}
+
+body {
+  background: var(--dark-color);
+  padding-top: 170px;
+}
+
+.present {
+  width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+span {
+  transition: all 0.5s ease-in-out;
+}
+
+.present:hover span{
+  background: var(--ribbon-bright);
+}
+
+.lid, .box {
+  background: 
+  radial-gradient(white 15%, transparent 15.1%),
+  var(--present-box);
+  background-position: 0 0, 25px 25px;
+  background-size: 45px 45px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.lid {
+  width: 400px;
+  height: 70px;
+  box-shadow: 1px 2px 3px var(--shadow);
+  z-index: 1;
+  padding: 0 2px;
+  background-color: var(--present-lid);
+  top: 0;
+  left: 0;
+  transition: all ease-in-out 0.4s;
+}
+
+.box {
+  width: 400px;
+  height: 250px;
+  top: -3px;
+}
+
+.lid span, .box span {
+  position: absolute;
+  display: block;
+  background-color: var(--ribbon-dim);
+  box-shadow: 1px 2px 3px var(--shadow);
+}
+
+.box span:first-child, .lid span{
+  height: 100%;
+  width: 60px;
+  left: 175px;
+}
+
+.box span:last-child{
+  height: 60px;
+  width: 100%;
+  top: 105px;
+}
+
+.promo {
+  color: var(--promo);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
+  position: relative;
+  top: 10px;
+  height: 0;
+  transition: all ease-out 0.5s;
+}
+
+.promo p, h2 {
+  margin: 0;
+}
+
+.promo p {
+  font-size: 24px;
+}
+
+.promo h2 {
+  font-size: 40px;
+}
+
+.present:hover .lid {
+  top: -100px;
+  transform: rotateZ(10deg);
+  left: 10px;
+}
+
+.present:hover .promo {
+  top: -80px;
+}
