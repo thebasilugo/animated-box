@@ -10,7 +10,12 @@
 
 body {
   background: var(--dark-color);
+  overflow: hidden;
   padding-top: 170px;
+}
+
+.container {
+  width: 100%;
 }
 
 .present {
@@ -104,4 +109,65 @@ span {
 
 .present:hover .promo {
   top: -80px;
+}
+
+@media only screen and (max-width: 415px) {
+  /* for mobile phones */
+  .container {
+    width: 250px;
+    margin: 0 auto;
+  } 
+
+  .present {
+    width: 200px;
+  }
+  
+  .lid, .box {
+    background-size: 25px 25px;
+  }
+  
+  .lid {
+    width: 200px;
+    height: 50px;
+  }
+  
+  .box {
+    width: 200px;
+    height: 100px;
+    transition: all ease-in-out 0.4s;
+  }
+  
+  .box span:first-child, .lid span{
+    height: 100%;
+    width: 35px;
+    left: 85px;
+  }
+  
+  .box span:last-child{
+    height: 35px;
+    width: 100%;
+    top: 25px;
+  }
+  
+  .promo p {
+    font-size: 16px;
+  }
+  
+  .promo h2 {
+    font-size: 20px;
+  }
+  
+  .present:hover .lid {
+    top: -60px;
+    transform: rotateZ(10deg);
+    left: 10px;
+  }
+
+  .present:hover .box {
+    top: 10px;
+  }
+  
+  .present:hover .promo {
+    top: -40px;
+  }
 }
