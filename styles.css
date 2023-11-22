@@ -114,12 +114,12 @@ span {
 @media only screen and (max-width: 415px) {
   /* for mobile phones */
   .container {
-    width: 250px;
+    width: 350px;
     margin: 0 auto;
   } 
 
   .present {
-    width: 200px;
+    width: 300px;
   }
   
   .lid, .box {
@@ -127,47 +127,63 @@ span {
   }
   
   .lid {
-    width: 200px;
-    height: 50px;
+    width: 300px;
+    height: 70px;
   }
   
   .box {
-    width: 200px;
-    height: 100px;
+    width: 300px;
+    height: 200px;
     transition: all ease-in-out 0.4s;
   }
   
   .box span:first-child, .lid span{
     height: 100%;
-    width: 35px;
-    left: 85px;
+    width: 50px;
+    left: 125px;
   }
   
   .box span:last-child{
-    height: 35px;
+    height: 50px;
     width: 100%;
-    top: 25px;
+    top: 50px;
   }
   
   .promo p {
-    font-size: 16px;
+    font-size: 20px;
+    visibility: hidden;
   }
   
   .promo h2 {
-    font-size: 20px;
+    font-size: 22px;
+    visibility: hidden;
   }
   
   .present:hover .lid {
+    top: 0px;
+    transform: rotateZ(0deg);
+    left: 0px;
+  }
+
+  .present:hover .box {
+    top: 0px;
+  }
+  
+  .present:hover .promo {
+    top: 0px;
+  }
+
+  .present.open .lid{
     top: -60px;
     transform: rotateZ(10deg);
     left: 10px;
   }
 
-  .present:hover .box {
+  .present.open .box {
     top: 10px;
   }
   
-  .present:hover .promo {
+  .present.open .promo {
     top: -40px;
   }
 }
